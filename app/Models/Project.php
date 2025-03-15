@@ -16,7 +16,6 @@ class Project extends Model
     const STATUS_COMPLETED = 'Completed';
     const STATUS_CANCELED = 'Canceled';
 
-
     public static function getStatusValues(): array
     {
         return [
@@ -25,5 +24,15 @@ class Project extends Model
             self::STATUS_COMPLETED,
             self::STATUS_CANCELED,
         ];
+    }
+
+    public function user()
+    {
+        return $this->belongsToMany(User::class);
+    }
+
+    public function timesheet()
+    {
+        return $this->hasMany(Timesheet::class);
     }
 }

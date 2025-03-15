@@ -26,4 +26,9 @@ class Attribute extends Model
             self::SELECT_TYPE
         ];
     }
+
+    public function values()
+    {
+        return $this->hasMany(AttributeValue::class, 'attribute_id');
+    }
 }

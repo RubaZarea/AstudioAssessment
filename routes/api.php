@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttributeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
@@ -15,9 +16,16 @@ Route::middleware('auth:api')->group(function () {
 
     Route::post('logout', [AuthController::class, 'logout']);
 
+    //Projects Endpoints
     Route::get('projects', [ProjectController::class, 'index']);
     Route::get('projects/{id}', [ProjectController::class, 'show']);
     Route::post('projects', [ProjectController::class, 'store']);
     Route::put('projects/{id}', [ProjectController::class, 'update']);
     Route::delete('projects/{id}', [ProjectController::class, 'destroy']);
+
+    //Attributes Endpoints
+    Route::get('attributes', [AttributeController::class, 'index']);
+    Route::post('attributes', [AttributeController::class, 'store']);
+    Route::put('attributes/{id}', [AttributeController::class, 'update']);
+
 });

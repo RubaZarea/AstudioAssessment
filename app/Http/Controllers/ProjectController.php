@@ -46,7 +46,8 @@ class ProjectController extends Controller
         try {
             $project = $this->projectSvc->update($request->all(), $id);
             return response()->json($project);
-        } catch (ModelNotFoundException) {
+        } catch (ModelNotFoundException $e) {
+            Log::error('Model Not Found Exception: ' . $e->getMessage());
             return response()->json(['error' => 'Project not found'], 404);
         } catch (Exception $e) {
             Log::error('General Exception: ' . $e->getMessage());

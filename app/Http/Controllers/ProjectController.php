@@ -33,7 +33,7 @@ class ProjectController extends Controller
         return response()->json($project);
     }
 
-    public function show($id)
+    public function show(int $id)
     {
         try {
             $project = $this->projectSvc->show($id);
@@ -58,10 +58,10 @@ class ProjectController extends Controller
         }
     }
 
-    public function destroy(Request $request)
+    public function destroy(int $id)
     {
         try {
-            $this->projectSvc->destroy($request->id);
+            $this->projectSvc->destroy($id);
             return response()->json(['message' => 'Project deleted successfully'], 200);
         } catch (ModelNotFoundException $e) {
             Log::error('ModelNotFoundException: ' . $e->getMessage());

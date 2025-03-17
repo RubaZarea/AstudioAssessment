@@ -31,7 +31,7 @@ class ProjectService
         return $this->projectRepo->show($id);
     }
 
-    public function update(array $projectData, int $id)
+    public function update(array $projectData, int $id): Project
     {
         $setAttrValues = array_key_exists('attributes', $projectData) ? true : false;
         return $this->projectRepo->update($projectData, $id, $setAttrValues);

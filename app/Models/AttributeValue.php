@@ -8,6 +8,8 @@ class AttributeValue extends Model
 {
 
     protected $fillable = [
+        'attribute_id', 
+        'entity_id',
         'value',
     ];
 

@@ -25,8 +25,11 @@ class UpdateProjectRequest extends FormRequest
     {
         return [
             'id' => 'required|exists:projects,id',
-            'name' => 'string|unique:projects,name,' . $this->input('id'),
-            'status' => 'required|in:' . implode(',', Project::getStatusValues())
+            'name' => 'string|max:255|unique:projects,name,' . $this->input('id'),
+            'status' => 'required|in:' . implode(',', Project::getStatusValues()),
+            'attributes' => 'sometimes|array',
+            'attributes.*.id' => 'required_with:attributes|exists:attributes,id',
+            'attributes.*.value' => 'required_with:attributes',
         ];
     }
 }

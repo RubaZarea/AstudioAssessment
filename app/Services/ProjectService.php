@@ -22,7 +22,8 @@ class ProjectService
 
     public function store(array $projectData): Project
     {
-        return $this->projectRepo->store($projectData);
+        $setAttrValues = array_key_exists('attributes', $projectData) ? true : false;
+        return $this->projectRepo->store($projectData, $setAttrValues);
     }
 
     public function show(int $id): Project
@@ -32,7 +33,8 @@ class ProjectService
 
     public function update(array $projectData, int $id)
     {
-        return $this->projectRepo->update($projectData, $id);
+        $setAttrValues = array_key_exists('attributes', $projectData) ? true : false;
+        return $this->projectRepo->update($projectData, $id, $setAttrValues);
     }
 
      public function destroy(int $id): void

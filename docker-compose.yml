@@ -1,0 +1,52 @@
+version: "3"
+services:
+  app:
+    build:
+      args:
+        user: zarea
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: astudio
+    container_name: astudio-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - astudio
+
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    container_name: astudio-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+    networks:
+      - astudio
+    ports:
+      - "3306:3306"
+
+  nginx:
+    image: nginx:alpine
+    container_name: astudio-nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - astudio
+  
+networks:
+  astudio:
+    driver: bridge

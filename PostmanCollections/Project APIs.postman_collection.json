@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "d69b2448-88bb-47bb-9575-34309d9f6a9b",
+		"name": "Project APIs",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43137713",
+		"_collection_link": "https://red-crescent-597456.postman.co/workspace/Team-Workspace~0b198782-2aca-45cf-85ac-2eb1d458eb14/collection/43137713-d69b2448-88bb-47bb-9575-34309d9f6a9b?action=share&source=collection_link&creator=43137713"
+	},
+	"item": [
+		{
+			"name": "Get projects",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDA4YWI2Y2I4ZmM1YWUwMWUyZDFhYmY1NzE1ZTY5NjUxZDI0ODU5YTdiOWYwYzc5ZjY5N2E0ODBkNDczZThkNDRlMGQ0ZWNiZWQ1NGNlNjMiLCJpYXQiOjE3NDIyMTY0NTEuNzg0MDA0LCJuYmYiOjE3NDIyMTY0NTEuNzg0MDA5LCJleHAiOjE3NzM3NTI0NTEuNzc1NDUzLCJzdWIiOiIxMSIsInNjb3BlcyI6W119.akkAf7MaUzteelRGQridcT7nwM6KSPYnnd40xK8fO_mfYFq9PdkKSWljivdqoEt6TGRmDEZkpMCz6DnbIH-XooxYu7xgct5xNZMp_P_NvvyWanmWer6bzcee2bj7AFlWkMRNPE5kILCHKsmrxlTmaSw3-alrcZgdYgOdFblQMutxR4ir0IyNukN5qCk99tfihX9adbAAix31wMCanAg_L9NrCmiz_qXlNInKdSWlgVOdfAuuUf7qyOUipd9aK0S8EwdQUnjvGHeO7BUwsDaIDnSUp3wtK1YyhZtQ9P75epLuozaDBx7TzmlpJ2P43mA2iSIqAHDjNFmZEu_xF6y15yHiTzhjbU2RyRCybT9MOBOHDuZuXWp4YGRI1du79xeHlcKNGevqoBOFepCNptzJIg1lWxiy8UtObj3PM5P62X7VcmkdlEpJo07ZLRYC8m9oIjSfPfOKPDckv1uC2bkdXDvUc1IMm09_wC0lQMrYHynPGjrL8JRRWCTsUCcYeYeRw6_zgyozwdT4R7P8W0yODO2U2_g9tWonAiB6vjkBl3wqxdPuYVRVe2Z1p3L4YCoG6bIJLqLo8cIfnvbqf-eBpoU3uHbqoXCsFkrCTqztp3SjMW5q5lbng9u9HZCGZUtHfyX1WtpB4olL8tlTnkc4Y4fz0qLY95GQAba2iumUmUQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Filter projects",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDkwYWJjMWVjNGUzODgyYmY0OWYyMDgzOWIxYzYyZjM3NGY4MTBmNGUzZDYyMDAwYmQ0YmM1ZDk1Y2ZiNWQwOGVlODE5Mzk0ZmQ3YWU5NDMiLCJpYXQiOjE3NDIxOTA1NDQuMzIwNzA3LCJuYmYiOjE3NDIxOTA1NDQuMzIwNzA4LCJleHAiOjE3NzM3MjY1NDQuMzE3MzQzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.ZDxyYbxRqyTOgB73rzczvhmBD-qgYyfSc3BJru3w_qa1SXN8VT9nNNbxz5xfs5gCIcniy31ILLHQD6V58gaSH4XNFJkAoSZi4b3OBdVfOiCEsbaa9Z0twrhjmXwNR3ee_J5sVXcfXc_hOUk7Fp2xVsz0kr2NZKOIyrCYQaZPotqKWXDXKyZfbl5rb4hdco-GblgEPTjqzYqPLmAkOJ1brxQ4xTZ0cOYVR8ThOk63uaIouvJzG5CEWkR3Q8_3e9Fz7bC82Xc9v28CzXnMUiBy0qYF4FF7vF5ST49dKdqVeHRwSXLWZOsXbkW-YOsTAA8173UXacYbIHIYkdH92mYOKh2CjxkWkc_zoAWI1S53a5XuZyxg4Wta7MPSsSh74C2zKlHjAwT9tWOwKg__gkKgKVz0LfWsYFHH-WlOS1kzLtPaCToekGP6kBqOOrJP9g0uhaLKmjqEv5kpMCKqh7A1BC394cPbkPBtPryo64hDcdRUNRxvkrEcNJq-zxP7EF7ktLpuidhGeqNsgpbSTSS4eoRTD3IdcO0xR-WfRUPuM5VBwlTD99TYNOJikFDjWS96ErR4uOuOVkHoAXzkhIvHyJ4KpZqi14gFYYQKuMj7iHpgd2jZg9-DAKrRLjx6-WqNpZvZY726OCN-OcWXOe4JqIiRxDzFBYaBxjdFw7_jPcA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects?filters[name]=project 2&filters[department]=Dummy Value",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "filters[name]",
+							"value": "project 2"
+						},
+						{
+							"key": "filters[department]",
+							"value": "Dummy Value"
+						}
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get project",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2QxNzU3ZDEwOTJlMzUzMmE4YmE4MDQ4MWUyY2ZmM2JlMzczNzM1MjliNWMyMmMyZWE1OGI5OGNhNTVhNWZhYjhjZmRlZThhMzkxOGJkN2EiLCJpYXQiOjE3NDIxMTk5NzcuMDM5MTYzLCJuYmYiOjE3NDIxMTk5NzcuMDM5MTY0LCJleHAiOjE3NzM2NTU5NzcuMDM1MTc1LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.XCSe5Rk9lJgZoDGDymPIXCGxgQaU2Zbdqqik-RJOrwV65VO_7E1Q4z6r4oprCR1hIUYVkZ7D0WRGUzIAVitz51YybnPoGxOBJOLg8OEokGoZozA9TJpGKERxDu3OlpPNNyJrPi7PhVM6OFj8xnDV8qtV79Bmy2OXx9jgIpKrZmL2oKAg8PZN8WQ86ekoiw38dPAcOq8oZ-7RYVx7gi03wppT1aVaC0ApVQ_rBOwzqYabTodbs38f8U554x6NzHGoAej1x7ClRXCfvF2h3G5JBfOM2zgnaI7OKVNa2Er0rnrr0-ofzq4SSmY_4Il27-GOXL95icrJ9LQ_NxFJ4cE7X4C0dJ0Ej_K7YOKSf_JfKGVN3rd_RuS9d-HyUGpBh_kXHC1H5KVd74AY54y3l6DW_XGoZ2CIYi8SB_ksCR7TvBkC8heJU6ivyVFPF97ub5rCoCLNIgg9eeiz4I_FK_bWnHfcNm7-IutRRJSj0fIP54AovpfBsTxLmUDyp5-40rTq-o_yjcseMtWeewXmB-Uu2e_4VSG-s4UDJQUThLDmYWrjVPhUjmx_1V60HWaWpbDRuIMrrj7JrJ1RaVfx1jnuB8IcVKcnwld5kEgYUsXpdKJAgz2lPNh7kzkxAl99G5_y1aVIGNDSLg8fM1mFqFc2sSFXtF9qy6sZup5yU1OWH3c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"4"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Store project",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2QxNzU3ZDEwOTJlMzUzMmE4YmE4MDQ4MWUyY2ZmM2JlMzczNzM1MjliNWMyMmMyZWE1OGI5OGNhNTVhNWZhYjhjZmRlZThhMzkxOGJkN2EiLCJpYXQiOjE3NDIxMTk5NzcuMDM5MTYzLCJuYmYiOjE3NDIxMTk5NzcuMDM5MTY0LCJleHAiOjE3NzM2NTU5NzcuMDM1MTc1LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.XCSe5Rk9lJgZoDGDymPIXCGxgQaU2Zbdqqik-RJOrwV65VO_7E1Q4z6r4oprCR1hIUYVkZ7D0WRGUzIAVitz51YybnPoGxOBJOLg8OEokGoZozA9TJpGKERxDu3OlpPNNyJrPi7PhVM6OFj8xnDV8qtV79Bmy2OXx9jgIpKrZmL2oKAg8PZN8WQ86ekoiw38dPAcOq8oZ-7RYVx7gi03wppT1aVaC0ApVQ_rBOwzqYabTodbs38f8U554x6NzHGoAej1x7ClRXCfvF2h3G5JBfOM2zgnaI7OKVNa2Er0rnrr0-ofzq4SSmY_4Il27-GOXL95icrJ9LQ_NxFJ4cE7X4C0dJ0Ej_K7YOKSf_JfKGVN3rd_RuS9d-HyUGpBh_kXHC1H5KVd74AY54y3l6DW_XGoZ2CIYi8SB_ksCR7TvBkC8heJU6ivyVFPF97ub5rCoCLNIgg9eeiz4I_FK_bWnHfcNm7-IutRRJSj0fIP54AovpfBsTxLmUDyp5-40rTq-o_yjcseMtWeewXmB-Uu2e_4VSG-s4UDJQUThLDmYWrjVPhUjmx_1V60HWaWpbDRuIMrrj7JrJ1RaVfx1jnuB8IcVKcnwld5kEgYUsXpdKJAgz2lPNh7kzkxAl99G5_y1aVIGNDSLg8fM1mFqFc2sSFXtF9qy6sZup5yU1OWH3c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Project 29\",\n    \"status\" : \"InProgress\",\n    \"attributes\" : [\n        {\n            \"id\" : 1, \n            \"value\" : \"2025-4-4\"\n        }, \n        {\n            \"id\" : 2, \n            \"value\" : \"2025-4-3\"\n        },\n        {\n            \"id\" : 3, \n            \"value\" : \"PO\"\n        }\n        \n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Update project",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDA4YWI2Y2I4ZmM1YWUwMWUyZDFhYmY1NzE1ZTY5NjUxZDI0ODU5YTdiOWYwYzc5ZjY5N2E0ODBkNDczZThkNDRlMGQ0ZWNiZWQ1NGNlNjMiLCJpYXQiOjE3NDIyMTY0NTEuNzg0MDA0LCJuYmYiOjE3NDIyMTY0NTEuNzg0MDA5LCJleHAiOjE3NzM3NTI0NTEuNzc1NDUzLCJzdWIiOiIxMSIsInNjb3BlcyI6W119.akkAf7MaUzteelRGQridcT7nwM6KSPYnnd40xK8fO_mfYFq9PdkKSWljivdqoEt6TGRmDEZkpMCz6DnbIH-XooxYu7xgct5xNZMp_P_NvvyWanmWer6bzcee2bj7AFlWkMRNPE5kILCHKsmrxlTmaSw3-alrcZgdYgOdFblQMutxR4ir0IyNukN5qCk99tfihX9adbAAix31wMCanAg_L9NrCmiz_qXlNInKdSWlgVOdfAuuUf7qyOUipd9aK0S8EwdQUnjvGHeO7BUwsDaIDnSUp3wtK1YyhZtQ9P75epLuozaDBx7TzmlpJ2P43mA2iSIqAHDjNFmZEu_xF6y15yHiTzhjbU2RyRCybT9MOBOHDuZuXWp4YGRI1du79xeHlcKNGevqoBOFepCNptzJIg1lWxiy8UtObj3PM5P62X7VcmkdlEpJo07ZLRYC8m9oIjSfPfOKPDckv1uC2bkdXDvUc1IMm09_wC0lQMrYHynPGjrL8JRRWCTsUCcYeYeRw6_zgyozwdT4R7P8W0yODO2U2_g9tWonAiB6vjkBl3wqxdPuYVRVe2Z1p3L4YCoG6bIJLqLo8cIfnvbqf-eBpoU3uHbqoXCsFkrCTqztp3SjMW5q5lbng9u9HZCGZUtHfyX1WtpB4olL8tlTnkc4Y4fz0qLY95GQAba2iumUmUQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 75,\n    \"name\" : \"Project 20\",\n    \"status\" : \"InProgress\",\n     \"attributes\" : [\n        {\n            \"id\" : 11, \n            \"value\" : \"2025-17-4\"\n        }, \n        {\n            \"id\" : 12, \n            \"value\" : \"2025-17-3\"\n        },\n        {\n            \"id\" : 10, \n            \"value\" : \"IT\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/75",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"75"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete project",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/81",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"81"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}

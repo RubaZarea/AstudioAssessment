@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "3ca8f685-1a67-4b38-b7f4-d81061f1af80",
+		"name": "Timesheet APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43137713",
+		"_collection_link": "https://red-crescent-597456.postman.co/workspace/Team-Workspace~0b198782-2aca-45cf-85ac-2eb1d458eb14/collection/43137713-3ca8f685-1a67-4b38-b7f4-d81061f1af80?action=share&source=collection_link&creator=43137713"
+	},
+	"item": [
+		{
+			"name": "Get timesheets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/timesheets",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"timesheets"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get timesheet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/timesheets/46",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"timesheets",
+						"46"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Store timesheet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"user_id\" : 69 ,\n            \"project_id\" : 74,\n            \"task_name\" : \"my task\",\n            \"date\" : \"10-5-2024\",\n            \"hours\" : 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/timesheets",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"timesheets"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Update timesheet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"id\" : 61,\n     \"user_id\" : 70 ,\n     \"project_id\" : 75,\n     \"task_name\" : \"my task2\",\n     \"date\" : \"10-5-2024\",\n     \"hours\" : 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/timesheets/61",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"timesheets",
+						"61"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete timesheet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/timesheets/61",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"timesheets",
+						"61"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		}
+	]
+}

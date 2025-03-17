@@ -26,7 +26,7 @@ class StoreProjectRequest extends FormRequest
             'name' => 'required|string|max:255|unique:projects,name',
             'status' => 'required|in:' . implode(',', Project::getStatusValues()),
             'attributes' => 'sometimes|array', // The attributes array is optional
-            'attributes.*.id' => 'required_with:attributes|exists:attributes,id', // name is required if attributes exist
+            'attributes.*.id' => 'required_with:attributes|exists:attributes,id', // id is required if attributes exist
             'attributes.*.value' => 'required_with:attributes',
         ];
     }

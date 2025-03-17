@@ -25,7 +25,7 @@ class UpdateAttributeRequest extends FormRequest
         return [
             'id' => 'required|exists:attributes,id',
             'name' => 'string|max:255|unique:attributes,name,' . $this->input('id'),
-            'type' => 'required|in:' . implode(',', Attribute::getAttributeTypes())
+            'type' => 'in:' . implode(',', Attribute::getAttributeTypes())
         ];
     }
 }

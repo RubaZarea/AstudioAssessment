@@ -24,3 +24,4 @@ package-lock.json
 yarn.lock
 *.log
 .DS_Store
+/database/migrations/*_create_oauth_*.php

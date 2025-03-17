@@ -19,9 +19,11 @@ class ProjectController extends Controller
         $this->projectSvc = $projectSvc;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $project = $this->projectSvc->index();
+        $filters = $request->has('filters') ? $request->filters : [];
+        $project = $this->projectSvc->index($filters);
+
         return response()->json($project);
     }
 
@@ -55,7 +57,7 @@ class ProjectController extends Controller
             return response()->json(['error' => 'An error occurred while updating the project'], 500);
         }
     }
-  
+
     public function destroy(Request $request)
     {
         try {
@@ -69,5 +71,4 @@ class ProjectController extends Controller
             return response()->json(['error' => 'An error occurred while deleting the project'], 500);
         }
     }
-    
 }

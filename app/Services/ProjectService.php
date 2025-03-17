@@ -15,9 +15,9 @@ class ProjectService
         $this->projectRepo = $projectRepo;
     }
 
-    public function index(): Collection
+    public function index(array $filters = []): Collection
     {
-        return $this->projectRepo->index();
+        return $this->projectRepo->index($filters);
     }
 
     public function store(array $projectData): Project

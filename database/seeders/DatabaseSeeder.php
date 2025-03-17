@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Attribute;
 use App\Models\AttributeValue;
 use App\Models\Project;
+use App\Models\Timesheet;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,12 +18,21 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory(10)->create();
+        $this->seedProjects();
+        $this->seedProjectAttributes();
+        Timesheet::factory(15)->create();
+    }
 
+    public function seedProjects(): void
+    {
         Project::factory(10)->create()->each(function ($project) {
             $users = User::inRandomOrder()->take(rand(1, 3))->pluck('id');
             $project->users()->attach($users);
         });
+    }
 
+    public function seedProjectAttributes(): void
+    {
         $attributes = [
             ['name' => 'department', 'type' => 'text'],
             ['name' => 'start_date', 'type' => 'date'],

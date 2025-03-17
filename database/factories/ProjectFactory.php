@@ -18,7 +18,7 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->unique()->name(),
+            'name' => 'project ' . fake()->unique()->randomNumber(),
             'status' =>  fake()->randomElement(Project::getStatusValues())
         ];
     }

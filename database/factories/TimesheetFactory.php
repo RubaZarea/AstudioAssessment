@@ -24,7 +24,7 @@ class TimesheetFactory extends Factory
         return [
             'user_id' => fake()->randomElement($users),
             'project_id' => fake()->randomElement($projects),
-            'task_name' => fake()->name(),
+            'task_name' => 'task ' . fake()->unique()->randomNumber(),
             'date' => fake()->date(),
             'hours' => fake()->numberBetween(0, 99999)
         ];

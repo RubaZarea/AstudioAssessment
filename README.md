@@ -7,60 +7,127 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Setup Instructions
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. Clone the repository
+2. Install Docker and Docker Compose from docker's official site
+   - You can download Docker Desktop in mac and windows.
+   - Docker Compose is included in Docker Desktop.
+   - Verify installation: `docker --version` `docker compose version`
+3. Open Docker Desktop to run docker daemon.
+   - In linux you can run `sudo systemctl start docker`
+5. Create .env file and copy .env.example to it.
+6. In the project directory run `docker-compose build`
+7. Run `docker-compose up -d`
+8. Run `docker ps` , you should see 3 containers running.
+9. Run `docker-compose exec app composer install`
+10. Run `docker-compose exec app php artisan key:generate`
+11. Run `docker compose exec app php artisan passport:install`
+    - `Would you like to run all pending database migrations?` type `yes`
+    - `Would you like to create the "personal access" and "password grant" clients?` type `yes`
+12. Run `docker-compose exec app php artisan db:seed` 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Connect To DB Tool
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Use mysql connection
+2. Host is 127.0.0.1
+3. Get Username, Password and Database name from .env file
+4. Port is 3306
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## API Documentation
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Authentication
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* Register
+  - POST /api/register
+  - Payload: { first\_name, last\_name, email, password }
+  - Registers a new user.
+* Login
+  - POST /api/login
+  - Payload: { email, password }
+  - Logs in a user and returns an authentication token.
+* Logout
+  - POST /api/logout (authentication is required)
+  - Revokes the current user's authentication token.
 
-## Laravel Sponsors
+### Attributes
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* Get all attributes
+  - GET /api/attributes (authentication is required)
+  - Fetches all attributes
+* Create attribute
+  - POST /api/attributes (authentication is required)
+  - Payload: {name, type}
+  - type should be in (text, date, number, select)
+  - Creates a new attribute
+* Update attribute
+  - PUT api/attributes/{id} (authentication is required)
+  - Payload: { id, name, type }
+  - Updates the specified attributes's information.
 
-### Premium Partners
+### Projects
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+* Get all projects
+  - GET /api/projects (authentication is required)
+  - Fetches all projects, with optional filtering.
+* Get project
+  - GET /api/projects/{id} (authentication is required)
+  - Fetches the details of the specified project.
+* Create project
+  - POST /api/projects (authentication is required)
+  - Payload: { name, status, attributes }
+  - status should be in (NotStarted, InProgress, Completed, Canceled)
+  - attributes is optional field, but if it exists, then attribute's id and value are required
+  - Creates a new project
+* Update project
+  - PUT api/projects/{id} (authentication is required)
+  - Payload: { id, name, status, attributes}
+  - Updates the specified project's information.
+* Delete project
+  - DELETE /api/projects/{id} (authentication is required)
+  - Deletes the specified project.
 
-## Contributing
+### Timesheets
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Get all timesheets
+  - GET /api/timesheets (authentication is required)
+  - Fetches all timesheets
+* Get timesheet
+  - GET /api/timesheets/{id} (authentication is required)
+  - Fetches the details of the specified timesheet.
+* Create timesheet
+  - POST /api/timesheets (authentication is required)
+  - Payload: {project\_id, user\_id, task\_name, date, hours}
+  - Creates a new timesheet
+* Update timesheet
+  - PUT api/timesheets/{id} (authentication is required)
+  - Payload: { id, project\_id, user\_id, task\_name, date, hours }
+  - Updates the specified timesheet's information.
+* Delete timesheet
+  - DELETE /api/timesheets/{id} (authentication is required)
+  - Deletes the specified timesheet.
+ 
 
-## Code of Conduct
+## Project Filtering
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+For the Get all projects endpoints, you can add query parameters to filter the results:
 
-## Security Vulnerabilities
+- Filter with dynamic or regular attributes, for example:
+  GET /api/projects?filters[name]=ProjectA&filters[department]=IT
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Authentication
 
-## License
+To access all endpoints (except register and login), you need to get Bearer token from register or login endpoints then include this token in the Authorization header of your requests.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Postman Collection
+
+Use these files in project root directory/PostmanCollections to import the postman collections:
+* Attributes collection
+  - Attribute APIs.postman_collection.json
+* Authentication collection
+  - Auth APIs.postman_collection.json
+* Project collection
+  - Project APIs.postman_collection.json
+* Timesheet collection
+  - Timesheet APIs.postman_collection.json

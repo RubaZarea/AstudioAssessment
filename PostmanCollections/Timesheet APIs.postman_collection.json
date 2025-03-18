@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "3ca8f685-1a67-4b38-b7f4-d81061f1af80",
 		"name": "Timesheet APIs",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "43137713",
 		"_collection_link": "https://red-crescent-597456.postman.co/workspace/Team-Workspace~0b198782-2aca-45cf-85ac-2eb1d458eb14/collection/43137713-3ca8f685-1a67-4b38-b7f4-d81061f1af80?action=share&source=collection_link&creator=43137713"
 	},
@@ -29,13 +29,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTk5ZWNkZTBhZTU0YjhhM2I0ZWU0MTMxZmI1ZDRlZDgwOGMyZjE1MTA2NjEyOWQ5ZGM3MjVmNjc0N2U5NGRlNTc2M2ExNjU2YmZhYmQ3OGIiLCJpYXQiOjE3NDIyNjY1MzkuMDc2NzgyLCJuYmYiOjE3NDIyNjY1MzkuMDc2Nzg0LCJleHAiOjE3NzM4MDI1MzkuMDY4MDMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.rS6_YQzbeXx1eUfTsCaLpzewQUpCMQWmufwEyNvl_c39tciBZODUMCXney_xGQDpY9eEx9XzWn9nQCBuuGiO5emZ2G1X6aWg-sGvr4u01wPl-jOkfNAVOB5a_IDHgr32LTLL0O4OCAyCRhc7LLIRClfnadQ03o9MqBANJuu0IB1E3YMwdRpUBzn29VdGLUlm1xarEfp_qGgyA7Hg41UHDOH9zxD5r6MmxOqiDBWuDCodyVzxJ3U2JhKTzI1DkvVihj-jSr90j4w0HWocLpj4m_pFEsrSi9KGlPJKEON4hnHGnU2mTkFeas8AFiFbx2hNVVn9wHObzCr2JhZDulqRPZz4hMc0vw5cYFeHC3qEqRgqr4RnveXRBi7-Bv9dJL1a2TaejGdMQ7hyWpgv26R_rrCok8U2A6xr9CPXR9z9Wqf5yxJSebkOb6xKKcU-JaJE3XXaZgThcjA07axF9sfMwIFoXuphH6AtKT3IvyMOXMxyRL9djSUTTAQPI3ZpDJWW4u8LLiMc5jeXh9PbnAOl5G1MS8mBY_o3-q3c6JneBnKMfb413bJhNMW0fsiGCwB9JsDHCXo9YNVE9tuqI7AKDrSi-8bH6CQyj7bmkW7Hwt7SX6h42WmNKpNk0htGMvSJe0iqYjkz8ekDp9MewYHVMMeBZa7hPNihWt65dvhS82w"
+					}
 				},
 				"method": "GET",
 				"header": [
@@ -54,21 +50,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/timesheets",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"timesheets"
-					]
-				},
+				"url": "http://127.0.0.1:8000/api/timesheets",
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
 			},
 			"response": []
@@ -95,13 +77,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTk5ZWNkZTBhZTU0YjhhM2I0ZWU0MTMxZmI1ZDRlZDgwOGMyZjE1MTA2NjEyOWQ5ZGM3MjVmNjc0N2U5NGRlNTc2M2ExNjU2YmZhYmQ3OGIiLCJpYXQiOjE3NDIyNjY1MzkuMDc2NzgyLCJuYmYiOjE3NDIyNjY1MzkuMDc2Nzg0LCJleHAiOjE3NzM4MDI1MzkuMDY4MDMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.rS6_YQzbeXx1eUfTsCaLpzewQUpCMQWmufwEyNvl_c39tciBZODUMCXney_xGQDpY9eEx9XzWn9nQCBuuGiO5emZ2G1X6aWg-sGvr4u01wPl-jOkfNAVOB5a_IDHgr32LTLL0O4OCAyCRhc7LLIRClfnadQ03o9MqBANJuu0IB1E3YMwdRpUBzn29VdGLUlm1xarEfp_qGgyA7Hg41UHDOH9zxD5r6MmxOqiDBWuDCodyVzxJ3U2JhKTzI1DkvVihj-jSr90j4w0HWocLpj4m_pFEsrSi9KGlPJKEON4hnHGnU2mTkFeas8AFiFbx2hNVVn9wHObzCr2JhZDulqRPZz4hMc0vw5cYFeHC3qEqRgqr4RnveXRBi7-Bv9dJL1a2TaejGdMQ7hyWpgv26R_rrCok8U2A6xr9CPXR9z9Wqf5yxJSebkOb6xKKcU-JaJE3XXaZgThcjA07axF9sfMwIFoXuphH6AtKT3IvyMOXMxyRL9djSUTTAQPI3ZpDJWW4u8LLiMc5jeXh9PbnAOl5G1MS8mBY_o3-q3c6JneBnKMfb413bJhNMW0fsiGCwB9JsDHCXo9YNVE9tuqI7AKDrSi-8bH6CQyj7bmkW7Hwt7SX6h42WmNKpNk0htGMvSJe0iqYjkz8ekDp9MewYHVMMeBZa7hPNihWt65dvhS82w"
+					}
 				},
 				"method": "GET",
 				"header": [
@@ -120,22 +98,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/timesheets/46",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"timesheets",
-						"46"
-					]
-				},
+				"url": "http://127.0.0.1:8000/api/timesheets/2",
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
 			},
 			"response": []
@@ -159,13 +122,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTk5ZWNkZTBhZTU0YjhhM2I0ZWU0MTMxZmI1ZDRlZDgwOGMyZjE1MTA2NjEyOWQ5ZGM3MjVmNjc0N2U5NGRlNTc2M2ExNjU2YmZhYmQ3OGIiLCJpYXQiOjE3NDIyNjY1MzkuMDc2NzgyLCJuYmYiOjE3NDIyNjY1MzkuMDc2Nzg0LCJleHAiOjE3NzM4MDI1MzkuMDY4MDMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.rS6_YQzbeXx1eUfTsCaLpzewQUpCMQWmufwEyNvl_c39tciBZODUMCXney_xGQDpY9eEx9XzWn9nQCBuuGiO5emZ2G1X6aWg-sGvr4u01wPl-jOkfNAVOB5a_IDHgr32LTLL0O4OCAyCRhc7LLIRClfnadQ03o9MqBANJuu0IB1E3YMwdRpUBzn29VdGLUlm1xarEfp_qGgyA7Hg41UHDOH9zxD5r6MmxOqiDBWuDCodyVzxJ3U2JhKTzI1DkvVihj-jSr90j4w0HWocLpj4m_pFEsrSi9KGlPJKEON4hnHGnU2mTkFeas8AFiFbx2hNVVn9wHObzCr2JhZDulqRPZz4hMc0vw5cYFeHC3qEqRgqr4RnveXRBi7-Bv9dJL1a2TaejGdMQ7hyWpgv26R_rrCok8U2A6xr9CPXR9z9Wqf5yxJSebkOb6xKKcU-JaJE3XXaZgThcjA07axF9sfMwIFoXuphH6AtKT3IvyMOXMxyRL9djSUTTAQPI3ZpDJWW4u8LLiMc5jeXh9PbnAOl5G1MS8mBY_o3-q3c6JneBnKMfb413bJhNMW0fsiGCwB9JsDHCXo9YNVE9tuqI7AKDrSi-8bH6CQyj7bmkW7Hwt7SX6h42WmNKpNk0htGMvSJe0iqYjkz8ekDp9MewYHVMMeBZa7hPNihWt65dvhS82w"
+					}
 				},
 				"method": "POST",
 				"header": [
@@ -177,28 +136,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n            \"user_id\" : 69 ,\n            \"project_id\" : 74,\n            \"task_name\" : \"my task\",\n            \"date\" : \"10-5-2024\",\n            \"hours\" : 3\n}",
+					"raw": "{\n            \"user_id\" : 2 ,\n            \"project_id\" : 2,\n            \"task_name\" : \"my task\",\n            \"date\" : \"2024-10-5\",\n            \"hours\" : 3\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/timesheets",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"timesheets"
-					]
-				},
+				"url": "http://127.0.0.1:8000/api/timesheets",
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
 			},
 			"response": []
@@ -222,13 +167,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTk5ZWNkZTBhZTU0YjhhM2I0ZWU0MTMxZmI1ZDRlZDgwOGMyZjE1MTA2NjEyOWQ5ZGM3MjVmNjc0N2U5NGRlNTc2M2ExNjU2YmZhYmQ3OGIiLCJpYXQiOjE3NDIyNjY1MzkuMDc2NzgyLCJuYmYiOjE3NDIyNjY1MzkuMDc2Nzg0LCJleHAiOjE3NzM4MDI1MzkuMDY4MDMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.rS6_YQzbeXx1eUfTsCaLpzewQUpCMQWmufwEyNvl_c39tciBZODUMCXney_xGQDpY9eEx9XzWn9nQCBuuGiO5emZ2G1X6aWg-sGvr4u01wPl-jOkfNAVOB5a_IDHgr32LTLL0O4OCAyCRhc7LLIRClfnadQ03o9MqBANJuu0IB1E3YMwdRpUBzn29VdGLUlm1xarEfp_qGgyA7Hg41UHDOH9zxD5r6MmxOqiDBWuDCodyVzxJ3U2JhKTzI1DkvVihj-jSr90j4w0HWocLpj4m_pFEsrSi9KGlPJKEON4hnHGnU2mTkFeas8AFiFbx2hNVVn9wHObzCr2JhZDulqRPZz4hMc0vw5cYFeHC3qEqRgqr4RnveXRBi7-Bv9dJL1a2TaejGdMQ7hyWpgv26R_rrCok8U2A6xr9CPXR9z9Wqf5yxJSebkOb6xKKcU-JaJE3XXaZgThcjA07axF9sfMwIFoXuphH6AtKT3IvyMOXMxyRL9djSUTTAQPI3ZpDJWW4u8LLiMc5jeXh9PbnAOl5G1MS8mBY_o3-q3c6JneBnKMfb413bJhNMW0fsiGCwB9JsDHCXo9YNVE9tuqI7AKDrSi-8bH6CQyj7bmkW7Hwt7SX6h42WmNKpNk0htGMvSJe0iqYjkz8ekDp9MewYHVMMeBZa7hPNihWt65dvhS82w"
+					}
 				},
 				"method": "PUT",
 				"header": [
@@ -240,29 +181,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n     \"id\" : 61,\n     \"user_id\" : 70 ,\n     \"project_id\" : 75,\n     \"task_name\" : \"my task2\",\n     \"date\" : \"10-5-2024\",\n     \"hours\" : 3\n}",
+					"raw": "{\n     \"id\" : 7,\n     \"user_id\" : 10 ,\n     \"project_id\" : 5,\n     \"task_name\" : \"my task2\",\n     \"date\" : \"2024-5-10\",\n     \"hours\" : 3\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/timesheets/61",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"timesheets",
-						"61"
-					]
-				},
+				"url": "http://127.0.0.1:8000/api/timesheets/7",
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
 			},
 			"response": []
@@ -286,13 +212,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDYzOGM1MmU0MzU4MTQ0MDVhZWY1YTM1MDdjNjRlYjI5NmIzNWY3N2IwNTM0N2NjM2RkMmY1NGNkMTM3ZWI5NjcwYmE1OGZhYzEzOTkzYmMiLCJpYXQiOjE3NDIyMDExNTQuODcxNTYxLCJuYmYiOjE3NDIyMDExNTQuODcxNTYyLCJleHAiOjE3NzM3MzcxNTQuODY3OTEzLCJzdWIiOiI4OSIsInNjb3BlcyI6W119.hTDlth5_bQYX_2om8Vjw0ULHARtLQYcdEc9qeec-M8I09o3B9C9bvFf_OvH4zyMpXtglMga3Ip0F5pUd6HqBKZI46WknHl-QX7M91h-a8CPcUoeewA7rM-qhinjNLJvXstIptin_ZKVRN9f6vsj3G8RpnB-tDsYxi4JzzPK9gLoAF84iw-dMyG5MltVwQ85eaKTKsf--ZwU_-SBYlTtMSYRSSfNUcpeMNgtr4iyP77YuJs713yLYrbIgLJxIjQ3GDpMTALminVjBIjZ7hlPWmPbXEKnsOORJFA4E18Y_xHlnckMO3FwW9GUAiHCwP1PffyXKS9l1EoV_NzYYI0PRja3CN1xqYZXmbIBD5sNUF20hGye_Vj_WAF_9w4VhK5_JoAPlzwDTJihx3ozqDTVNgIWzpjc4O1us9DO2BepB8SQyKy15l8udn7Eh_2whPMuiCHGaZz6Knln_bdDuj31_-NfTQ3R6U08rlJWOGv9qIsbxIEFlBKvRCH53di9ySmET-HtxiLnvv1TCpWuH7r4vfzNikKZD7m3xFeo-Gl3a2jeeBXCVtOyonluojX2klCTsYwtJcE8BZjgo5lbQTCX0iUm7H9LlHeLdN_mwVcqmVi2ork7hSR2SZzxlDSIZX2vzmivNIuQYqa7rez3t9u1Z8pLvpOBN0zik3RQ72m6ucdI",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTk5ZWNkZTBhZTU0YjhhM2I0ZWU0MTMxZmI1ZDRlZDgwOGMyZjE1MTA2NjEyOWQ5ZGM3MjVmNjc0N2U5NGRlNTc2M2ExNjU2YmZhYmQ3OGIiLCJpYXQiOjE3NDIyNjY1MzkuMDc2NzgyLCJuYmYiOjE3NDIyNjY1MzkuMDc2Nzg0LCJleHAiOjE3NzM4MDI1MzkuMDY4MDMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.rS6_YQzbeXx1eUfTsCaLpzewQUpCMQWmufwEyNvl_c39tciBZODUMCXney_xGQDpY9eEx9XzWn9nQCBuuGiO5emZ2G1X6aWg-sGvr4u01wPl-jOkfNAVOB5a_IDHgr32LTLL0O4OCAyCRhc7LLIRClfnadQ03o9MqBANJuu0IB1E3YMwdRpUBzn29VdGLUlm1xarEfp_qGgyA7Hg41UHDOH9zxD5r6MmxOqiDBWuDCodyVzxJ3U2JhKTzI1DkvVihj-jSr90j4w0HWocLpj4m_pFEsrSi9KGlPJKEON4hnHGnU2mTkFeas8AFiFbx2hNVVn9wHObzCr2JhZDulqRPZz4hMc0vw5cYFeHC3qEqRgqr4RnveXRBi7-Bv9dJL1a2TaejGdMQ7hyWpgv26R_rrCok8U2A6xr9CPXR9z9Wqf5yxJSebkOb6xKKcU-JaJE3XXaZgThcjA07axF9sfMwIFoXuphH6AtKT3IvyMOXMxyRL9djSUTTAQPI3ZpDJWW4u8LLiMc5jeXh9PbnAOl5G1MS8mBY_o3-q3c6JneBnKMfb413bJhNMW0fsiGCwB9JsDHCXo9YNVE9tuqI7AKDrSi-8bH6CQyj7bmkW7Hwt7SX6h42WmNKpNk0htGMvSJe0iqYjkz8ekDp9MewYHVMMeBZa7hPNihWt65dvhS82w"
+					}
 				},
 				"method": "DELETE",
 				"header": [
@@ -311,22 +233,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/timesheets/61",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"timesheets",
-						"61"
-					]
-				},
+				"url": "http://127.0.0.1:8000/api/timesheets/2",
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
 			},
 			"response": []

@@ -4,6 +4,7 @@ use App\Http\Controllers\AttributeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TimesheetController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -17,10 +18,13 @@ Route::middleware('auth:api')->group(function () {
 
     Route::post('logout', [AuthController::class, 'logout']);
 
+
     //Automatically generates RESTful API endpoints through apiResource
     Route::apiResource('timesheets', TimesheetController::class);
     Route::apiResource('projects', ProjectController::class);
-    
+    Route::apiResource('users', UserController::class);
+
+
     Route::get('attributes', [AttributeController::class, 'index']);
     Route::post('attributes', [AttributeController::class, 'store']);
     Route::put('attributes/{id}', [AttributeController::class, 'update']);

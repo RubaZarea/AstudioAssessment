@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "ab227ede-a9dd-4302-b9e0-fab7453fca04",
+		"name": "User APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43137713",
+		"_collection_link": "https://red-crescent-597456.postman.co/workspace/Team-Workspace~0b198782-2aca-45cf-85ac-2eb1d458eb14/collection/43137713-ab227ede-a9dd-4302-b9e0-fab7453fca04?action=share&source=collection_link&creator=43137713"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTk5ZWNkZTBhZTU0YjhhM2I0ZWU0MTMxZmI1ZDRlZDgwOGMyZjE1MTA2NjEyOWQ5ZGM3MjVmNjc0N2U5NGRlNTc2M2ExNjU2YmZhYmQ3OGIiLCJpYXQiOjE3NDIyNjY1MzkuMDc2NzgyLCJuYmYiOjE3NDIyNjY1MzkuMDc2Nzg0LCJleHAiOjE3NzM4MDI1MzkuMDY4MDMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.rS6_YQzbeXx1eUfTsCaLpzewQUpCMQWmufwEyNvl_c39tciBZODUMCXney_xGQDpY9eEx9XzWn9nQCBuuGiO5emZ2G1X6aWg-sGvr4u01wPl-jOkfNAVOB5a_IDHgr32LTLL0O4OCAyCRhc7LLIRClfnadQ03o9MqBANJuu0IB1E3YMwdRpUBzn29VdGLUlm1xarEfp_qGgyA7Hg41UHDOH9zxD5r6MmxOqiDBWuDCodyVzxJ3U2JhKTzI1DkvVihj-jSr90j4w0HWocLpj4m_pFEsrSi9KGlPJKEON4hnHGnU2mTkFeas8AFiFbx2hNVVn9wHObzCr2JhZDulqRPZz4hMc0vw5cYFeHC3qEqRgqr4RnveXRBi7-Bv9dJL1a2TaejGdMQ7hyWpgv26R_rrCok8U2A6xr9CPXR9z9Wqf5yxJSebkOb6xKKcU-JaJE3XXaZgThcjA07axF9sfMwIFoXuphH6AtKT3IvyMOXMxyRL9djSUTTAQPI3ZpDJWW4u8LLiMc5jeXh9PbnAOl5G1MS8mBY_o3-q3c6JneBnKMfb413bJhNMW0fsiGCwB9JsDHCXo9YNVE9tuqI7AKDrSi-8bH6CQyj7bmkW7Hwt7SX6h42WmNKpNk0htGMvSJe0iqYjkz8ekDp9MewYHVMMeBZa7hPNihWt65dvhS82w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTk5ZWNkZTBhZTU0YjhhM2I0ZWU0MTMxZmI1ZDRlZDgwOGMyZjE1MTA2NjEyOWQ5ZGM3MjVmNjc0N2U5NGRlNTc2M2ExNjU2YmZhYmQ3OGIiLCJpYXQiOjE3NDIyNjY1MzkuMDc2NzgyLCJuYmYiOjE3NDIyNjY1MzkuMDc2Nzg0LCJleHAiOjE3NzM4MDI1MzkuMDY4MDMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.rS6_YQzbeXx1eUfTsCaLpzewQUpCMQWmufwEyNvl_c39tciBZODUMCXney_xGQDpY9eEx9XzWn9nQCBuuGiO5emZ2G1X6aWg-sGvr4u01wPl-jOkfNAVOB5a_IDHgr32LTLL0O4OCAyCRhc7LLIRClfnadQ03o9MqBANJuu0IB1E3YMwdRpUBzn29VdGLUlm1xarEfp_qGgyA7Hg41UHDOH9zxD5r6MmxOqiDBWuDCodyVzxJ3U2JhKTzI1DkvVihj-jSr90j4w0HWocLpj4m_pFEsrSi9KGlPJKEON4hnHGnU2mTkFeas8AFiFbx2hNVVn9wHObzCr2JhZDulqRPZz4hMc0vw5cYFeHC3qEqRgqr4RnveXRBi7-Bv9dJL1a2TaejGdMQ7hyWpgv26R_rrCok8U2A6xr9CPXR9z9Wqf5yxJSebkOb6xKKcU-JaJE3XXaZgThcjA07axF9sfMwIFoXuphH6AtKT3IvyMOXMxyRL9djSUTTAQPI3ZpDJWW4u8LLiMc5jeXh9PbnAOl5G1MS8mBY_o3-q3c6JneBnKMfb413bJhNMW0fsiGCwB9JsDHCXo9YNVE9tuqI7AKDrSi-8bH6CQyj7bmkW7Hwt7SX6h42WmNKpNk0htGMvSJe0iqYjkz8ekDp9MewYHVMMeBZa7hPNihWt65dvhS82w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Store user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTk5ZWNkZTBhZTU0YjhhM2I0ZWU0MTMxZmI1ZDRlZDgwOGMyZjE1MTA2NjEyOWQ5ZGM3MjVmNjc0N2U5NGRlNTc2M2ExNjU2YmZhYmQ3OGIiLCJpYXQiOjE3NDIyNjY1MzkuMDc2NzgyLCJuYmYiOjE3NDIyNjY1MzkuMDc2Nzg0LCJleHAiOjE3NzM4MDI1MzkuMDY4MDMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.rS6_YQzbeXx1eUfTsCaLpzewQUpCMQWmufwEyNvl_c39tciBZODUMCXney_xGQDpY9eEx9XzWn9nQCBuuGiO5emZ2G1X6aWg-sGvr4u01wPl-jOkfNAVOB5a_IDHgr32LTLL0O4OCAyCRhc7LLIRClfnadQ03o9MqBANJuu0IB1E3YMwdRpUBzn29VdGLUlm1xarEfp_qGgyA7Hg41UHDOH9zxD5r6MmxOqiDBWuDCodyVzxJ3U2JhKTzI1DkvVihj-jSr90j4w0HWocLpj4m_pFEsrSi9KGlPJKEON4hnHGnU2mTkFeas8AFiFbx2hNVVn9wHObzCr2JhZDulqRPZz4hMc0vw5cYFeHC3qEqRgqr4RnveXRBi7-Bv9dJL1a2TaejGdMQ7hyWpgv26R_rrCok8U2A6xr9CPXR9z9Wqf5yxJSebkOb6xKKcU-JaJE3XXaZgThcjA07axF9sfMwIFoXuphH6AtKT3IvyMOXMxyRL9djSUTTAQPI3ZpDJWW4u8LLiMc5jeXh9PbnAOl5G1MS8mBY_o3-q3c6JneBnKMfb413bJhNMW0fsiGCwB9JsDHCXo9YNVE9tuqI7AKDrSi-8bH6CQyj7bmkW7Hwt7SX6h42WmNKpNk0htGMvSJe0iqYjkz8ekDp9MewYHVMMeBZa7hPNihWt65dvhS82w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n  \"first_name\": \"Benny\",\n  \"last_name\": \"Doe\",\n  \"email\": \"bennyDo20@example.com\",\n  \"password\": \"password123\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTk5ZWNkZTBhZTU0YjhhM2I0ZWU0MTMxZmI1ZDRlZDgwOGMyZjE1MTA2NjEyOWQ5ZGM3MjVmNjc0N2U5NGRlNTc2M2ExNjU2YmZhYmQ3OGIiLCJpYXQiOjE3NDIyNjY1MzkuMDc2NzgyLCJuYmYiOjE3NDIyNjY1MzkuMDc2Nzg0LCJleHAiOjE3NzM4MDI1MzkuMDY4MDMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.rS6_YQzbeXx1eUfTsCaLpzewQUpCMQWmufwEyNvl_c39tciBZODUMCXney_xGQDpY9eEx9XzWn9nQCBuuGiO5emZ2G1X6aWg-sGvr4u01wPl-jOkfNAVOB5a_IDHgr32LTLL0O4OCAyCRhc7LLIRClfnadQ03o9MqBANJuu0IB1E3YMwdRpUBzn29VdGLUlm1xarEfp_qGgyA7Hg41UHDOH9zxD5r6MmxOqiDBWuDCodyVzxJ3U2JhKTzI1DkvVihj-jSr90j4w0HWocLpj4m_pFEsrSi9KGlPJKEON4hnHGnU2mTkFeas8AFiFbx2hNVVn9wHObzCr2JhZDulqRPZz4hMc0vw5cYFeHC3qEqRgqr4RnveXRBi7-Bv9dJL1a2TaejGdMQ7hyWpgv26R_rrCok8U2A6xr9CPXR9z9Wqf5yxJSebkOb6xKKcU-JaJE3XXaZgThcjA07axF9sfMwIFoXuphH6AtKT3IvyMOXMxyRL9djSUTTAQPI3ZpDJWW4u8LLiMc5jeXh9PbnAOl5G1MS8mBY_o3-q3c6JneBnKMfb413bJhNMW0fsiGCwB9JsDHCXo9YNVE9tuqI7AKDrSi-8bH6CQyj7bmkW7Hwt7SX6h42WmNKpNk0htGMvSJe0iqYjkz8ekDp9MewYHVMMeBZa7hPNihWt65dvhS82w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n  \"id\": 12,\n  \"first_name\": \"Benny\",\n  \"last_name\": \"Doe\",\n  \"email\": \"bennyDo2@example.com\",\n  \"password\": \"password12\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTk5ZWNkZTBhZTU0YjhhM2I0ZWU0MTMxZmI1ZDRlZDgwOGMyZjE1MTA2NjEyOWQ5ZGM3MjVmNjc0N2U5NGRlNTc2M2ExNjU2YmZhYmQ3OGIiLCJpYXQiOjE3NDIyNjY1MzkuMDc2NzgyLCJuYmYiOjE3NDIyNjY1MzkuMDc2Nzg0LCJleHAiOjE3NzM4MDI1MzkuMDY4MDMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.rS6_YQzbeXx1eUfTsCaLpzewQUpCMQWmufwEyNvl_c39tciBZODUMCXney_xGQDpY9eEx9XzWn9nQCBuuGiO5emZ2G1X6aWg-sGvr4u01wPl-jOkfNAVOB5a_IDHgr32LTLL0O4OCAyCRhc7LLIRClfnadQ03o9MqBANJuu0IB1E3YMwdRpUBzn29VdGLUlm1xarEfp_qGgyA7Hg41UHDOH9zxD5r6MmxOqiDBWuDCodyVzxJ3U2JhKTzI1DkvVihj-jSr90j4w0HWocLpj4m_pFEsrSi9KGlPJKEON4hnHGnU2mTkFeas8AFiFbx2hNVVn9wHObzCr2JhZDulqRPZz4hMc0vw5cYFeHC3qEqRgqr4RnveXRBi7-Bv9dJL1a2TaejGdMQ7hyWpgv26R_rrCok8U2A6xr9CPXR9z9Wqf5yxJSebkOb6xKKcU-JaJE3XXaZgThcjA07axF9sfMwIFoXuphH6AtKT3IvyMOXMxyRL9djSUTTAQPI3ZpDJWW4u8LLiMc5jeXh9PbnAOl5G1MS8mBY_o3-q3c6JneBnKMfb413bJhNMW0fsiGCwB9JsDHCXo9YNVE9tuqI7AKDrSi-8bH6CQyj7bmkW7Hwt7SX6h42WmNKpNk0htGMvSJe0iqYjkz8ekDp9MewYHVMMeBZa7hPNihWt65dvhS82w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"12"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		}
+	]
+}

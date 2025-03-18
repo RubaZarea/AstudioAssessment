@@ -107,6 +107,26 @@
 * Delete timesheet
   - DELETE /api/timesheets/{id} (authentication is required)
   - Deletes the specified timesheet.
+
+  ### Users
+
+* Get all users
+  - GET /api/users (authentication is required)
+  - Fetches all users
+* Get user
+  - GET /api/user/{id} (authentication is required)
+  - Fetches the details of the specified user.
+* Create user
+  - POST /api/users (authentication is required)
+  - Payload: { first\_name, last\_name, email, password }
+  - Creates a new user
+* Update user
+  - PUT api/users/{id} (authentication is required)
+  - Payload: { id, first\_name, last\_name, email, password }
+  - Updates the specified user's information.
+* Delete user
+  - DELETE /api/users/{id} (authentication is required)
+  - Deletes the specified user.
  
 
 ## Project Filtering
@@ -131,3 +151,5 @@ Use these files in project root directory/PostmanCollections to import the postm
   - Project APIs.postman_collection.json
 * Timesheet collection
   - Timesheet APIs.postman_collection.json
+* User collection
+  - User APIs.postman_collection.json

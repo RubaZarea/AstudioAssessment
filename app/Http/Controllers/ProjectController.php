@@ -29,8 +29,13 @@ class ProjectController extends Controller
 
     public function store(StoreProjectRequest $request)
     {
-        $project = $this->projectSvc->store($request->all());
-        return response()->json($project);
+        try {
+            $project = $this->projectSvc->store($request->all());
+            return response()->json($project);
+        } catch (Exception $e) {
+            Log::error('General Exception: ' . $e->getMessage());
+            return response()->json(['error' => 'An error occurred while creating the project'], 500);
+        }
     }
 
     public function show(int $id)

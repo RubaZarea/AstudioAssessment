@@ -27,9 +27,14 @@ class UserController extends Controller
 
     public function store(RegisterRequest $request)
     {
-        $userData = UserInput::fromRequest($request);
-        $user = $this->userSvc->store($userData);
-        return response()->json($user);
+        try {
+            $userData = UserInput::fromRequest($request);
+            $user = $this->userSvc->store($userData);
+            return response()->json($user);
+        } catch (Exception $e) {
+            Log::error('General Exception: ' . $e->getMessage());
+            return response()->json(['error' => 'An error occurred while creating the user'], 500);
+        }
     }
 
     public function show(int $id)

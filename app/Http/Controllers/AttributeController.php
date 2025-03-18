@@ -25,8 +25,13 @@ class AttributeController extends Controller
 
     public function store(StoreAttributeRequest $request)
     {
-        $attribute = $this->attrSvc->store($request->all());
-        return response()->json($attribute);
+        try {
+            $attribute = $this->attrSvc->store($request->all());
+            return response()->json($attribute);
+        } catch (Exception $e) {
+            Log::error('General Exception: ' . $e->getMessage());
+            return response()->json(['error' => 'An error occurred while creating the attribute'], 500);
+        }
     }
 
     public function update(UpdateAttributeRequest $request, int $id)

@@ -27,9 +27,14 @@ class TimesheetController extends Controller
 
     public function store(StoreTimesheetRequest $request)
     {
-        $timesheetData = TimesheetInput::fromRequest($request);
-        $timesheet = $this->timesheetSvc->store($timesheetData);
-        return response()->json($timesheet);
+        try {
+            $timesheetData = TimesheetInput::fromRequest($request);
+            $timesheet = $this->timesheetSvc->store($timesheetData);
+            return response()->json($timesheet);
+        } catch (Exception $e) {
+            Log::error('General Exception: ' . $e->getMessage());
+            return response()->json(['error' => 'An error occurred while creating the timesheet'], 500);
+        }
     }
 
     public function show(int $id)

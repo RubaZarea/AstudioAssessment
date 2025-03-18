@@ -142,14 +142,4 @@ To access all endpoints (except register and login), you need to get Bearer toke
 
 ## Postman Collection
 
-Use these files in project root directory/PostmanCollections to import the postman collections:
-* Attributes collection
-  - Attribute APIs.postman_collection.json
-* Authentication collection
-  - Auth APIs.postman_collection.json
-* Project collection
-  - Project APIs.postman_collection.json
-* Timesheet collection
-  - Timesheet APIs.postman_collection.json
-* User collection
-  - User APIs.postman_collection.json
+Use astudio-assessment.postman_collection.json file in project root to import the postman collection.
